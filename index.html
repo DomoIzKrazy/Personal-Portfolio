@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevPixel | Game Dev Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav>
+    <div class="nav-logo">
+      <svg class="sprite" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="0" width="4" height="1" fill="#00e5ff"/>
+        <rect x="1" y="1" width="6" height="1" fill="#00e5ff"/>
+        <rect x="0" y="2" width="8" height="1" fill="#00e5ff"/>
+        <rect x="0" y="3" width="3" height="1" fill="#00e5ff"/>
+        <rect x="5" y="3" width="3" height="1" fill="#00e5ff"/>
+        <rect x="0" y="4" width="8" height="1" fill="#00e5ff"/>
+        <rect x="1" y="5" width="2" height="1" fill="#ffe600"/>
+        <rect x="5" y="5" width="2" height="1" fill="#ffe600"/>
+        <rect x="0" y="6" width="3" height="1" fill="#00e5ff"/>
+        <rect x="5" y="6" width="3" height="1" fill="#00e5ff"/>
+      </svg>
+      
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">HOME</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════ MOBILE MENU ═══════════ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMobile()">▶ HOME</a>
+    <a href="#about" onclick="closeMobile()">▶ ABOUT</a>
+    <a href="#skills" onclick="closeMobile()">▶ SKILLS</a>
+    <a href="#projects" onclick="closeMobile()">▶ PROJECTS</a>
+    <a href="#contact" onclick="closeMobile()">▶ CONTACT</a>
+  </div>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="home">
+    <div class="container" style="display:flex;flex-direction:column;align-items:center;">
+      <div class="hero-sprite-row">
+        <canvas class="pixel-char" id="spriteA" width="16" height="16"></canvas>
+        <canvas class="pixel-char" id="spriteB" width="16" height="16"></canvas>
+        <canvas class="pixel-char" id="spriteC" width="16" height="16"></canvas>
+      </div>
+      <div class="hero-tag">// PLAYER ONE HAS ENTERED //</div>
+      <h1 class="hero-name" id="heroName">&nbsp;</h1>
+      <p class="hero-sub">
+        Aspiring <span>Game Developer</span> &amp; Pixel Artist.<br>
+        Passionate about building small game projects and continuosly improving
+      </p>
+      <a href="#projects" class="btn-pixel">▶ VIEW QUESTS</a>
+      <div class="scroll-hint">▼ SCROLL TO CONTINUE ▼</div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="pixel-divider"><div class="dot"></div><div class="line"></div></div>
+      <div class="sec-header">// STAGE 01</div>
+      <h2 class="sec-title">ABOUT ME</h2>
+
+      <div class="about-grid reveal">
+        <div>
+          <div class="avatar-box">
+            <img src="images/game pfp.jpg" alt="Profile Photo" class="avatar-photo" />
+            <div class="avatar-label">PLAYER.EXE</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>Hey! I'm <span>John Glenn De Leon</span> — a solo indie game developer with a deep love for 2D games and retro aesthetics.</p>
+          <p>I'm currently still learning to build games that feel nostalgic yet simple and enjoyable, experimenting with 2d/pixel art and basic mechanics.</p>
+          <p>As I grow, I continue exploring game development, learning new tools, and improving my skills step by step—with help from tutorials, and communities.</p>
+          <div class="stat-row">
+            <div class="stat-chip">🎮 Learning Game Dev</div>
+            <div class="stat-chip">📦 Small Projects Built</div>
+            <div class="stat-chip">🧠 Always Improving</div>
+            <div class="stat-chip">🌱 Beginner Level</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="pixel-divider"><div class="dot"></div><div class="line"></div></div>
+      <div class="sec-header">// STAGE 02</div>
+      <h2 class="sec-title">SKILL TREE</h2>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Injected by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS ═══════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="pixel-divider"><div class="dot"></div><div class="line"></div></div>
+      <div class="sec-header">// STAGE 03</div>
+      <h2 class="sec-title">QUEST LOG</h2>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Injected by main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="pixel-divider"><div class="dot"></div><div class="line"></div></div>
+      <div class="sec-header">// FINAL STAGE</div>
+      <h2 class="sec-title" style="text-align:center;">INSERT COIN</h2>
+
+      <div class="contact-panel reveal">
+        <p>Ready to collaborate on a new adventure? Drop a message and let's make something legendary together.</p>
+        <div class="contact-links">
+          <a href="mailto:johnglennz11@gmail.com">✉ EMAIL</a>
+          <a href="#">ⓕ FACEBOOK</a>
+          <a href="#">🅾 INSTAGRAM</a>
+          <a href="#">🐱 GITHUB</a>
+        </div>
+        <a href="mailto:alex@devpixel.io" class="btn-pixel pink">▶ START GAME</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    MADE WITH <span>♥</span> © 2026 JOHN GLENN DE LEON — ALL RIGHTS RESERVED
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
